@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="О приложении"
+		android:textColor="@color/black"
+		android:textSize="30dp"
+		android:layout_marginTop="10dp"
+		android:layout_marginLeft="10dp"
+		/>
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="Идея: Основная идея приложения состоит в том, что бы не задумываться о том, как нужно офоромлять список литературы по ГОСТ. Это может быть особенно полезно, когда вы пишите курсовую, дипломную, научную работы. Здесь вам не нужно будет думать о том, какие данные откуда взять и переживать правильно ли вы оформили список литературы (источников).\nНа сегоднящний момент запланировано сделать масса фичей. А это значит, что сервис будет становится только лучше. И это мы делаем для вам.\nНадеемся, что вам будет удобно пользоваться этим приложением! :-)\n\nРазработчики: Денис Скарлат\t\tbboyzlodey@gmail.com\n\nВерсия: 0.1 alpha"
+		android:textColor="@color/black"
+		android:layout_marginTop="10dp"
+		android:layout_marginLeft="10dp"
+		/>
+
+</LinearLayout>

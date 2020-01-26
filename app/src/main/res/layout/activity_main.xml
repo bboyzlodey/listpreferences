@@ -178,6 +178,12 @@
 		android:outlineAmbientShadowColor="@color/light_goldenrod_yellow"
 		android:outlineSpotShadowColor="@color/light_sea_green"
 		android:text="Сгенерировать" />
-
+	<Button
+		android:layout_width="100dp"
+		android:layout_height="100dp"
+		android:background="@drawable/ic_shortcut_content_copy"
+		android:layout_marginLeft="50dp"
+		android:onClick="onClick2"
+		/>
 
 </LinearLayout>

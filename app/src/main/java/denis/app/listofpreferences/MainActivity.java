@@ -11,6 +11,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.Button;
 import android.widget.EditText;
+import java.awt.datatransfer.StringSelection;
+import java.awt.Toolkit;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -45,5 +47,12 @@ public class MainActivity extends AppCompatActivity {
         res = res + tmp.getText().toString();
         mResultEditText.setText(res);
         res = null;
+    }
+    // метод для копирования текста в буфер обмена (не работает)
+    public void onClick2(View view){
+        String myString = "This text will be copied into clipboard";
+        StringSelection stringSelection = new StringSelection(myString);
+        Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+        clipboard.setContents(stringSelection, null);
     }
 }
