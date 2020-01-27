@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     private Button mButton;
     private EditText mResultEditText;
     private EditText tmp;
-    private String res = "string ";
+    private String res;
     private int count;
     Context context;
 
