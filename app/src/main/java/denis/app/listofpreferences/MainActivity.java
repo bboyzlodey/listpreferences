@@ -53,6 +53,17 @@ public class MainActivity extends AppCompatActivity {
     }
     // метод для копирования текста в буфер обмена (не работает)
     public void onClick2(View view){
+        context = getApplicationContext();
+        Toast.makeText(context, "Copy button", Toast.LENGTH_SHORT).show();
 
+    }
+
+    public void onClick3(View view){
+        context = getApplicationContext();
+        Toast.makeText(context, "Info button", Toast.LENGTH_SHORT).show();
+        setContentView(R.layout.activity_about);
+    }
+    public void onClick4(View view){
+        setContentView(R.layout.activity_main);
     }
 }
