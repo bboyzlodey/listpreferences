@@ -31,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
 
         mButton = (Button)findViewById(R.id.my_button);
         mResultEditText = (EditText) findViewById(R.id.result_text);
-        context = getApplicationContext();
     }
 
     public void onClick(View view) {
@@ -49,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         tmp = (EditText)findViewById(R.id.pages_text);
         res = res + tmp.getText().toString();
         mResultEditText.setText(res);
+        context = getApplicationContext();
         Toast.makeText(context, "Строка создана успешно. Хотите скопировать в буфер?", Toast.LENGTH_SHORT).show();
     }
     // метод для копирования текста в буфер обмена (не работает)
