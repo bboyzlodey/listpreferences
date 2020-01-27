@@ -2,6 +2,8 @@ package denis.app.listofpreferences;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ClipData;
+import android.content.ClipboardManager;
 import android.os.Bundle;
 
 import android.content.Context;
@@ -11,8 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.Button;
 import android.widget.EditText;
-import java.awt.datatransfer.StringSelection;
-import java.awt.Toolkit;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText tmp;
     private String res = "string ";
     private int count;
+    Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,10 +31,11 @@ public class MainActivity extends AppCompatActivity {
 
         mButton = (Button)findViewById(R.id.my_button);
         mResultEditText = (EditText) findViewById(R.id.result_text);
+        context = getApplicationContext();
     }
 
     public void onClick(View view) {
-
+        res = null;
         tmp = (EditText)findViewById(R.id.authors_text);
         res = tmp.getText().toString();
         tmp = (EditText)findViewById(R.id.article_text);
@@ -46,13 +49,10 @@ public class MainActivity extends AppCompatActivity {
         tmp = (EditText)findViewById(R.id.pages_text);
         res = res + tmp.getText().toString();
         mResultEditText.setText(res);
-        res = null;
+        Toast.makeText(context, "Строка создана успешно. Хотите скопировать в буфер?", Toast.LENGTH_SHORT).show();
     }
     // метод для копирования текста в буфер обмена (не работает)
     public void onClick2(View view){
-        String myString = "This text will be copied into clipboard";
-        StringSelection stringSelection = new StringSelection(myString);
-        Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-        clipboard.setContents(stringSelection, null);
+
     }
 }
