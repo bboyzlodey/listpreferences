@@ -19,9 +19,9 @@ public class CreatePosition{
         int i;
         StringBuilder tmp = new StringBuilder();
 
-        i = conc.length;
+        i = 0;
 
-        while (i != conc.length) {
+        while (i != conc.create.length) {
             tmp.append(conc[i]);
             i++;
         }
