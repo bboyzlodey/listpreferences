@@ -2,7 +2,7 @@ package denis.app.listofpreferences;
 
 import java.util.Arrays;
 
-public class CreatePosition{
+class CreatePosition{
     StringBuilder [] create;
 
     /*
@@ -13,16 +13,33 @@ public class CreatePosition{
         if (one == 1)
         {
             create = new StringBuilder[15];
+			create[1] = new StringBuilder(" ");
+			create[3] = new StringBuilder(" // ");
+			create[5] = create[1];
+			create[7] = new StringBuilder(" - ");
+			create[9] = new StringBuilder(" - ¹");
+			create[11] = new StringBuilder(" - ñ. ");
+			create[13] = create[7];
         }
     }
-    public StringBuilder concat(StringBuilder [] conc) {
+	
+	public void initiliz(){
+		iht i = 0;
+			
+		while(i < this.create.length)
+		{
+			if (this.create[i] == null)
+				this.create[i] = new StringBuilder();
+			i++;
+		}
+	}
+    public StringBuilder concat() {
         int i;
         StringBuilder tmp = new StringBuilder();
 
         i = 0;
-
-        while (i != conc.create.length) {
-            tmp.append(conc[i]);
+        while (i != this.create.length) {
+            tmp.append(this.create[i]);
             i++;
         }
         return tmp;
