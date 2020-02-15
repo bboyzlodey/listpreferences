@@ -14,7 +14,7 @@ import android.widget.Toast;
 import android.widget.Button;
 import android.widget.EditText;
 
-byte typeOfPosition = 0;
+
 
 // Протестировать отдельно. Работает ли!?
 //        | |
@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     private int count;
     private CreatePosition prefer;
     Context context;
+    byte typeOfPosition = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
 
         while (i != prefer.createEditText.length)
         {
-            prefer.texts[i] = new StringBuilder(prefer.createEditText[i].getText().toString());
+            prefer.texts[i] = new StringBuilder((res = prefer.createEditText[i].getText().toString()));
             i++;
         }
         mResultEditText.setText(prefer.fill);
@@ -55,13 +56,14 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(context, "Строка создана успешно. Хотите скопировать в буфер?", Toast.LENGTH_SHORT).show();
     }
     // метод для копирования текста в буфер обмена (не работает)
-    public void onClick2(View view){
+    public void onClickCopyToClipboard(View view){
         context = getApplicationContext();
         Toast.makeText(context, "Copy button", Toast.LENGTH_SHORT).show();
-
+        ClipData clip = ClipData.newPlainText("clip to clipboard", res);
+        clipboard.setPrimaryClip(clip);
     }
 
-    public void onClick3(View view){
+    public void onClickInfo(View view){
         context = getApplicationContext();
         Toast.makeText(context, "Info button", Toast.LENGTH_SHORT).show();
         setContentView(R.layout.activity_about);

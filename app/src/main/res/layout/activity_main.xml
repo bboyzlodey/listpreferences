@@ -182,7 +182,7 @@
 		android:text="Копировать"
 		android:layout_gravity="center_vertical"
 		android:gravity="center_horizontal|center_vertical"
-		android:onClick="onClick2"
+		android:onClick="onClickCopyToClipboard"
 		/>
 
 		<Button
@@ -193,7 +193,7 @@
 			android:outlineAmbientShadowColor="@color/light_goldenrod_yellow"
 			android:outlineSpotShadowColor="@color/light_sea_green"
 			android:text="Инфо"
-			android:onClick="onClick3"/>
+			android:onClick="onClickInfo"/>
 		
 	</LinearLayout>
 
