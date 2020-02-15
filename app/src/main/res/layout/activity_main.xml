@@ -172,7 +172,7 @@
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_gravity="center_vertical"
-		android:onClick="onClick"
+		android:onClick="onClickGenerate"
 		android:outlineAmbientShadowColor="@color/light_goldenrod_yellow"
 		android:outlineSpotShadowColor="@color/light_sea_green"
 		android:text="Сгенерировать" />
@@ -194,6 +194,7 @@
 			android:outlineSpotShadowColor="@color/light_sea_green"
 			android:text="Инфо"
 			android:onClick="onClick3"/>
+		
 	</LinearLayout>
 
 </LinearLayout>

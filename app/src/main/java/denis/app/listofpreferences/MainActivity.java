@@ -14,6 +14,12 @@ import android.widget.Toast;
 import android.widget.Button;
 import android.widget.EditText;
 
+byte typeOfPosition = 0;
+
+// Протестировать отдельно. Работает ли!?
+//        | |
+//        | |
+// private CreatePosition prefer = new CreatePosition(typeOfPosition);
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText tmp;
     private String res;
     private int count;
+    private CreatePosition prefer;
     Context context;
 
     @Override
@@ -31,22 +38,17 @@ public class MainActivity extends AppCompatActivity {
 
         mButton = (Button)findViewById(R.id.my_button);
         mResultEditText = (EditText) findViewById(R.id.result_text);
+        prefer = new CreatePosition(typeOfPosition);
     }
 
-    public void onClick(View view) {
-        res = null;
-        tmp = (EditText)findViewById(R.id.authors_text);
-        res = tmp.getText().toString();
-        tmp = (EditText)findViewById(R.id.article_text);
-        res = res + tmp.getText().toString();
-        tmp = (EditText)findViewById(R.id.journal_text);
-        res = res + tmp.getText().toString();
-        tmp = (EditText)findViewById(R.id.year_text);
-        res = res + tmp.getText().toString();
-        tmp = (EditText)findViewById(R.id.publisher_text);
-        res = res + tmp.getText().toString();
-        tmp = (EditText)findViewById(R.id.pages_text);
-        res = res + tmp.getText().toString();
+    public void onClickGenerate(View view) {
+        int i = 0;
+        int j = 0;
+
+        while (i != prefer.createEditText.length)
+        {
+            
+        }
         mResultEditText.setText(res);
         context = getApplicationContext();
         Toast.makeText(context, "Строка создана успешно. Хотите скопировать в буфер?", Toast.LENGTH_SHORT).show();
