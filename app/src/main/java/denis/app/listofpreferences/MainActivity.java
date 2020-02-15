@@ -47,9 +47,10 @@ public class MainActivity extends AppCompatActivity {
 
         while (i != prefer.createEditText.length)
         {
-            
+            prefer.texts[i] = new StringBuilder(prefer.createEditText[i].getText().toString());
+            i++;
         }
-        mResultEditText.setText(res);
+        mResultEditText.setText(prefer.fill);
         context = getApplicationContext();
         Toast.makeText(context, "Строка создана успешно. Хотите скопировать в буфер?", Toast.LENGTH_SHORT).show();
     }

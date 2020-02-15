@@ -16,10 +16,11 @@ import android.widget.EditText;
 class CreatePosition{
     StringBuilder [] create;
     EditText [] createEditText;
+    StringBuilder [] texts;
     /*
     *
     * type == 0 the be article
-    * Идея сосотит в том, что бы сделать массив объектов
+    * Идея состoит в том, что бы сделать массив объектов
     */
     CreatePosition(byte type){
         if (type == 0)
@@ -39,6 +40,7 @@ class CreatePosition{
             createEditText[3] = (EditText)findViewById(R.id.year_text);
             createEditText[4] = (EditText)findViewById(R.id.publisher_text);
             createEditText[5] = (EditText)findViewById(R.id.pages_text);
+            texts = new StringBuilder[6];
         }
     }
 	
@@ -81,6 +83,20 @@ class CreatePosition{
             if ((this.create[i].toString() == null) && j != src.length)
             {
                 this.create[i] = src[j];
+                j++;
+            }
+            i++;
+        }
+        return (this.concatString());
+    }
+    public String fill(){
+        int i = 0;
+        int j = 0;
+
+        while (i != this.create.length) {
+            if ((this.create[i].toString() == null) && j != this.createEditText.length)
+            {
+                this.create[i] = this.createEditText[j];
                 j++;
             }
             i++;
