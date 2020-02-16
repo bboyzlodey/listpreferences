@@ -1,6 +1,7 @@
 package denis.app.listofpreferences;
 
 import java.util.Arrays;
+
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.ClipData;
 import android.content.ClipboardManager;
@@ -13,7 +14,7 @@ import android.widget.Toast;
 import android.widget.Button;
 import android.widget.EditText;
 
-class CreatePosition{
+class CreatePosition extends AppCompatActivity{
     StringBuilder [] create;
     EditText [] createEditText;
     StringBuilder [] texts;
@@ -45,7 +46,7 @@ class CreatePosition{
     }
 	
 	public void initiliz(){
-		iht i = 0;
+		int i = 0;
 			
 		while(i < this.create.length)
 		{
@@ -96,7 +97,7 @@ class CreatePosition{
         while (i != this.create.length) {
             if ((this.create[i].toString() == null) && j != this.createEditText.length)
             {
-                this.create[i] = this.createEditText[j];
+                this.create[i] = new StringBuilder(this.createEditText[j].getText().toString());
                 j++;
             }
             i++;
