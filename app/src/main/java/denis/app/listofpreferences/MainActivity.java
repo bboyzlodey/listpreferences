@@ -39,6 +39,12 @@ public class MainActivity extends AppCompatActivity {
 
         mButton = (Button)findViewById(R.id.my_button);
         mResultEditText = (EditText) findViewById(R.id.result_text);
+        prefer.createEditText[0] = (EditText)findViewById(R.id.authors_text);
+        prefer.createEditText[1] = (EditText)findViewById(R.id.article_text);
+        prefer.createEditText[2] = (EditText)findViewById(R.id.journal_text);
+        prefer.createEditText[3] = (EditText)findViewById(R.id.year_text);
+        prefer.createEditText[4] = (EditText)findViewById(R.id.publisher_text);
+        prefer.createEditText[5] = (EditText)findViewById(R.id.pages_text);
 //        prefer = new CreatePosition(typeOfPosition);
     }
 
@@ -61,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
         ClipboardManager clipboard = (ClipboardManager)
                 getSystemService(Context.CLIPBOARD_SERVICE);
         Toast.makeText(context, "Copy button", Toast.LENGTH_SHORT).show();
-        ClipData clip = ClipData.newPlainText("clip to clipboard", res);
+        ClipData clip = ClipData.newPlainText("clip to clipboard", "Hello World!");
         clipboard.setPrimaryClip(clip);
     }
 

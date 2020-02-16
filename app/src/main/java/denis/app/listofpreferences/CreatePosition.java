@@ -14,7 +14,7 @@ import android.widget.Toast;
 import android.widget.Button;
 import android.widget.EditText;
 
-class CreatePosition extends AppCompatActivity{
+class CreatePosition {
     StringBuilder [] create;
     EditText [] createEditText;
     StringBuilder [] texts;
@@ -35,12 +35,12 @@ class CreatePosition extends AppCompatActivity{
 			create[11] = new StringBuilder(" - �. ");
 			create[13] = create[7];
             createEditText = new EditText[6];
-            createEditText[0] = (EditText)findViewById(R.id.authors_text);
-            createEditText[1] = (EditText)findViewById(R.id.article_text);
-            createEditText[2] = (EditText)findViewById(R.id.journal_text);
-            createEditText[3] = (EditText)findViewById(R.id.year_text);
-            createEditText[4] = (EditText)findViewById(R.id.publisher_text);
-            createEditText[5] = (EditText)findViewById(R.id.pages_text);
+//            createEditText[0] = (EditText)findViewById(R.id.authors_text);
+//            createEditText[1] = (EditText)findViewById(R.id.article_text);
+//            createEditText[2] = (EditText)findViewById(R.id.journal_text);
+//            createEditText[3] = (EditText)findViewById(R.id.year_text);
+//            createEditText[4] = (EditText)findViewById(R.id.publisher_text);
+//            createEditText[5] = (EditText)findViewById(R.id.pages_text);
             texts = new StringBuilder[6];
         }
     }
