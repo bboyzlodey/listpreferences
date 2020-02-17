@@ -162,9 +162,8 @@
 		android:layout_marginLeft="19dp"
 		android:layout_marginRight="220dp"
 		android:layout_weight="1"
-		android:ems="10"
 		android:hint="40 - 44"
-		android:inputType="numberSigned"
+		android:inputType="numberDecimal"
 		android:textColor="@color/colorWhiteUser"
 		android:textColorHighlight="@color/light_sea_green"
 		android:backgroundTint="@color/orange"
@@ -185,10 +184,6 @@
 		android:textColorHighlight="@color/light_sea_green"
 		android:backgroundTint="@color/white_smoke"
 		android:backgroundTintMode="src_atop"
-		android:fitsSystemWindows="true"
-		android:clickable="false"
-		android:inputType="none"
-		android:contextClickable="false"
 		android:layout_weight="1"/>
 
 	<LinearLayout

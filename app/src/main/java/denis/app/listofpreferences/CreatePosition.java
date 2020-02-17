@@ -50,7 +50,7 @@ class CreatePosition {
 		}
 	}
 
-    public StringBuilder concat() {
+    public StringBuilder concatString() {
         int i;
         StringBuilder tmp = new StringBuilder();
 
@@ -66,24 +66,24 @@ class CreatePosition {
         return (Arrays.toString(conc));
     }
 
-    public String concatString(){
+    public String concatStringToArray(){
         return (Arrays.toString(this.create));
     }
 
-    public String fill(StringBuilder [] src){
-        int i = 0;
-        int j = 0;
-
-        while (i != this.create.length) {
-            if ((this.create[i].toString() == null) && j != src.length)
-            {
-                this.create[i] = src[j];
-                j++;
-            }
-            i++;
-        }
-        return (this.concatString());
-    }
+//    public String fill(StringBuilder [] src){
+//        int i = 0;
+//        int j = 0;
+//
+//        while (i != this.create.length) {
+//            if ((this.create[i].toString() == null) && j != src.length)
+//            {
+//                this.create[i] = src[j];
+//                j++;
+//            }
+//            i++;
+//        }
+//        return (this.concatString());
+//    }
     public String fill(){
         int i = 0;
         int j = 0;
@@ -96,6 +96,6 @@ class CreatePosition {
             }
             i++;
         }
-        return (this.concatString());
+        return (this.concatString().toString());
     }
 }
