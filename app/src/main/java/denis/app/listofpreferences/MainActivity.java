@@ -44,7 +44,9 @@ public class MainActivity extends AppCompatActivity {
         prefer.createEditText[2] = (EditText)findViewById(R.id.journal_text);
         prefer.createEditText[3] = (EditText)findViewById(R.id.year_text);
         prefer.createEditText[4] = (EditText)findViewById(R.id.publisher_text);
-        prefer.createEditText[5] = (EditText)findViewById(R.id.pages_text);
+        prefer.createEditText[6] = (EditText)findViewById(R.id.pages_text);
+        prefer.createEditText[7] = (EditText)findViewById(R.id.pages_text2);
+        prefer.createEditText[5] = (EditText)findViewById(R.id.numb_journal);
     }
 
     public void onClickGenerate(View view) {
@@ -65,9 +67,10 @@ public class MainActivity extends AppCompatActivity {
         context = getApplicationContext();
         ClipboardManager clipboard = (ClipboardManager)
                 getSystemService(Context.CLIPBOARD_SERVICE);
-        Toast.makeText(context, "Copy button", Toast.LENGTH_SHORT).show();
+        Toast.makeText(context, "Скопировано успешно", Toast.LENGTH_SHORT).show();
         ClipData clip = ClipData.newPlainText("clip to clipboard", res);
         clipboard.setPrimaryClip(clip);
+        Toast.makeText(context, res, Toast.LENGTH_SHORT).show();
     }
 
     public void onClickInfo(View view){

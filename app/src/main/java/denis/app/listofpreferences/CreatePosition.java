@@ -34,8 +34,8 @@ class CreatePosition {
 			create[9] = new StringBuilder(". - №");
 			create[11] = new StringBuilder(" - c. ");
 			create[13] = create[7];
-            createEditText = new EditText[6];
-            texts = new StringBuilder[6];
+            createEditText = new EditText[8];
+            texts = new StringBuilder[8];
         }
     }
 	
@@ -70,20 +70,7 @@ class CreatePosition {
         return (Arrays.toString(this.create));
     }
 
-//    public String fill(StringBuilder [] src){
-//        int i = 0;
-//        int j = 0;
-//
-//        while (i != this.create.length) {
-//            if ((this.create[i].toString() == null) && j != src.length)
-//            {
-//                this.create[i] = src[j];
-//                j++;
-//            }
-//            i++;
-//        }
-//        return (this.concatString());
-//    }
+
     public String fill(){
         int i = 0;
         int j = 0;
@@ -91,11 +78,22 @@ class CreatePosition {
         while (i != this.create.length) {
             if ((this.create[i] == null) && j != this.createEditText.length)
             {
+                if (i == 4)
+                {
+                    this.create[i] = new StringBuilder(this.createEditText[0].getText().toString());
+                    i++;
+                    continue;
+                }
                 this.create[i] = new StringBuilder(this.createEditText[j].getText().toString());
                 j++;
             }
             i++;
+            this.create[0] = firstAuthor(this.createEditText[0].getText().toString());
         }
         return (this.concatString().toString());
+    }
+    static public StringBuilder firstAuthor(String oneAuthor)
+    {
+        return (new StringBuilder(oneAuthor.substring(0,oneAuthor.indexOf('.', oneAuthor.indexOf('.') + 1))));
     }
 }

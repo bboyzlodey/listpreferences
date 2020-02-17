@@ -14,9 +14,9 @@
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:layout_marginTop="15dp"
-		android:layout_marginLeft="5dp"
-		android:layout_weight="1"
-		android:text="\t\tВведите авторов:"
+		android:layout_marginLeft="15dp"
+		android:layout_weight="0"
+		android:text="Авторы:"
 		android:textColor="@color/colorWhiteUser"
 		android:textStyle="bold" />
 
@@ -26,7 +26,7 @@
 		android:layout_height="wrap_content"
 		android:layout_marginLeft="19dp"
 		android:layout_marginRight="19dp"
-		android:layout_weight="1"
+		android:layout_weight="0"
 		android:textColor="@color/colorWhiteUser"
 		android:textColorHighlight="@color/light_sea_green"
 		android:backgroundTint="@color/orange"
@@ -40,11 +40,11 @@
 		android:id="@+id/name_of_article"
 		android:layout_width="match_parent"
 		android:layout_height="22dp"
-		android:layout_marginLeft="5dp"
-		android:text="\t\tВведите название статьи:"
+		android:layout_marginLeft="15dp"
+		android:text="Название статьи:"
 		android:textColor="@color/colorWhiteUser"
 		android:textStyle="bold"
-		android:layout_weight="1"/>
+		android:layout_weight="0"/>
 
 	<EditText
 		android:id="@+id/article_text"
@@ -61,15 +61,15 @@
 		android:textSize="15dp"
 		android:layout_marginLeft="19dp"
 		android:layout_marginRight="19dp"
-		android:layout_weight="1"/>
+		android:layout_weight="0"/>
 
 	<TextView
 		android:id="@+id/journal"
 		android:layout_width="match_parent"
 		android:layout_height="22dp"
-		android:layout_marginLeft="5dp"
-		android:layout_weight="1"
-		android:text="\t\tВведите название журнала:"
+		android:layout_marginLeft="15dp"
+		android:layout_weight="0"
+		android:text="Название журнала:"
 		android:textColor="@color/colorWhiteUser"
 		android:textStyle="bold" />
 
@@ -88,16 +88,16 @@
 		android:textSize="15dp"
 		android:layout_marginLeft="19dp"
 		android:layout_marginRight="19dp"
-		android:layout_weight="1"/>
+		android:layout_weight="0"/>
 
 	<TextView
 		android:id="@+id/year"
 		android:layout_width="match_parent"
 		android:layout_height="22dp"
-		android:layout_marginLeft="5dp"
-		android:layout_weight="1"
+		android:layout_marginLeft="15dp"
+		android:layout_weight="0"
 		android:background="@android:color/transparent"
-		android:text="\t\tВведите год издания:"
+		android:text="Год издания:"
 		android:textColor="@color/colorWhiteUser"
 		android:textStyle="bold" />
 
@@ -114,24 +114,23 @@
 		android:textColorHint="@color/white_smoke"
 		android:textSize="15dp"
 		android:layout_marginLeft="19dp"
-		android:layout_weight="1"/>
+		android:layout_weight="0"/>
 
 	<TextView
 		android:id="@+id/publisher"
 		android:layout_width="match_parent"
 		android:layout_height="22dp"
-		android:layout_marginLeft="5dp"
+		android:layout_marginLeft="15dp"
 		android:background="@android:color/transparent"
-		android:text="\t\tВведите название издательства:"
+		android:text="Название издательства:"
 		android:textColor="@color/colorWhiteUser"
 		android:textStyle="bold"
-		android:layout_weight="1"/>
+		android:layout_weight="0"/>
 
 	<EditText
 		android:id="@+id/publisher_text"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:ems="10"
 		android:inputType="textPersonName"
 		android:textColor="@color/colorWhiteUser"
 		android:textColorHighlight="@color/light_sea_green"
@@ -142,35 +141,87 @@
 		android:textSize="15dp"
 		android:layout_marginLeft="19dp"
 		android:layout_marginRight="20dp"
-		android:layout_weight="1"/>
+		android:layout_weight="0"/>
 
-	<TextView
-		android:id="@+id/pages"
-		android:layout_width="match_parent"
-		android:layout_height="22dp"
-		android:layout_marginLeft="5dp"
-		android:layout_weight="1"
-		android:background="@android:color/transparent"
-		android:text="\t\tВведите страницы из журнала:"
-		android:textColor="@color/colorWhiteUser"
-		android:textStyle="bold" />
 
-	<EditText
-		android:id="@+id/pages_text"
+	<RelativeLayout
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:layout_marginLeft="19dp"
-		android:layout_marginRight="220dp"
-		android:layout_weight="1"
-		android:hint="40 - 44"
-		android:inputType="numberDecimal"
-		android:textColor="@color/colorWhiteUser"
-		android:textColorHighlight="@color/light_sea_green"
-		android:backgroundTint="@color/orange"
-		android:backgroundTintMode="src_atop"
-		android:textColorHint="@color/white_smoke"
-		android:textSize="15dp" />
+		android:layout_marginLeft="15dp"
+		android:layout_marginRight="15dp"
+		android:layout_weight="1">
+		<TextView
+			android:id="@+id/pages"
+			android:layout_width="wrap_content"
+			android:layout_height="22dp"
+			android:layout_marginLeft="0dp"
+			android:background="@android:color/transparent"
+			android:text="Cтраницы:"
+			android:textColor="@color/colorWhiteUser"
+			android:textStyle="bold"/>
 
+		<EditText
+			android:id="@+id/pages_text"
+			android:layout_width="60dp"
+			android:layout_height="wrap_content"
+
+			android:hint="От 40"
+			android:layout_marginLeft="4dp"
+			android:inputType="numberDecimal"
+			android:textColor="@color/colorWhiteUser"
+			android:textColorHighlight="@color/light_sea_green"
+			android:backgroundTint="@color/orange"
+			android:backgroundTintMode="src_atop"
+			android:textColorHint="@color/white_smoke"
+			android:textSize="15dp"
+			android:layout_below="@id/pages"/>
+		<EditText
+			android:id="@+id/pages_text2"
+			android:layout_width="60dp"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="15dp"
+			android:layout_toRightOf="@id/pages_text"
+			android:layout_below="@id/pages"
+
+			android:hint="До 44"
+			android:inputType="numberDecimal"
+			android:textColor="@color/colorWhiteUser"
+			android:textColorHighlight="@color/light_sea_green"
+			android:backgroundTint="@color/orange"
+			android:backgroundTintMode="src_atop"
+			android:textColorHint="@color/white_smoke"
+			android:textSize="15dp" />
+
+		<TextView
+			android:id="@+id/number_journal"
+			android:layout_width="wrap_content"
+			android:layout_height="22dp"
+			android:layout_marginLeft="15dp"
+			android:background="@android:color/transparent"
+			android:text="Номер сборника:"
+			android:textColor="@color/colorWhiteUser"
+			android:textStyle="bold"
+			android:layout_toRightOf="@id/pages_text2"/>
+
+		<EditText
+			android:id="@+id/numb_journal"
+			android:layout_width="60dp"
+			android:layout_height="wrap_content"
+
+			android:hint="125"
+			android:layout_marginLeft="18dp"
+			android:inputType="numberDecimal"
+			android:textColor="@color/colorWhiteUser"
+			android:textColorHighlight="@color/light_sea_green"
+			android:backgroundTint="@color/orange"
+			android:backgroundTintMode="src_atop"
+			android:textColorHint="@color/white_smoke"
+			android:textSize="15dp"
+			android:layout_below="@id/pages"
+			android:layout_toRightOf="@id/pages_text2"
+			/>
+
+	</RelativeLayout>
 
 	<EditText
 		android:id="@+id/result_text"
