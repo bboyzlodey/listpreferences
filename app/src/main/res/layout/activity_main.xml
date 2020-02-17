@@ -18,7 +18,8 @@
 		android:layout_weight="0"
 		android:text="Авторы:"
 		android:textColor="@color/colorWhiteUser"
-		android:textStyle="bold" />
+		android:textStyle="bold"
+		/>
 
 	<EditText
 		android:id="@+id/authors_text"
@@ -33,6 +34,7 @@
 		android:backgroundTintMode="src_atop"
 		android:textColorHint="@color/white_smoke"
 		android:hint="Конюхов Р.В., ... Савельев К.Г"
+		android:inputType="textCapWords"
 
 		android:textSize="15dp" />
 
@@ -51,7 +53,7 @@
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:ems="10"
-		android:inputType="textPersonName"
+		android:inputType="textCapSentences"
 		android:textColor="@color/colorWhiteUser"
 		android:textColorHighlight="@color/light_sea_green"
 		android:backgroundTint="@color/orange"
@@ -61,7 +63,7 @@
 		android:textSize="15dp"
 		android:layout_marginLeft="19dp"
 		android:layout_marginRight="19dp"
-		android:layout_weight="0"/>
+		android:layout_weight="0" />
 
 	<TextView
 		android:id="@+id/journal"
@@ -78,7 +80,7 @@
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:ems="10"
-		android:inputType="textPersonName"
+		android:inputType="textCapSentences"
 		android:hint="Успехи в химии и химической технологии"
 		android:textColor="@color/colorWhiteUser"
 		android:textColorHighlight="@color/light_sea_green"
@@ -131,13 +133,13 @@
 		android:id="@+id/publisher_text"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:inputType="textPersonName"
+		android:inputType="textCapSentences"
 		android:textColor="@color/colorWhiteUser"
 		android:textColorHighlight="@color/light_sea_green"
 		android:backgroundTint="@color/orange"
 		android:backgroundTintMode="src_atop"
 		android:textColorHint="@color/white_smoke"
-		android:hint="ХИМПРОМ"
+		android:hint="Химпром"
 		android:textSize="15dp"
 		android:layout_marginLeft="19dp"
 		android:layout_marginRight="20dp"
@@ -167,7 +169,7 @@
 
 			android:hint="От 40"
 			android:layout_marginLeft="4dp"
-			android:inputType="numberDecimal"
+			android:inputType="number"
 			android:textColor="@color/colorWhiteUser"
 			android:textColorHighlight="@color/light_sea_green"
 			android:backgroundTint="@color/orange"
@@ -184,7 +186,7 @@
 			android:layout_below="@id/pages"
 
 			android:hint="До 44"
-			android:inputType="numberDecimal"
+			android:inputType="number"
 			android:textColor="@color/colorWhiteUser"
 			android:textColorHighlight="@color/light_sea_green"
 			android:backgroundTint="@color/orange"
