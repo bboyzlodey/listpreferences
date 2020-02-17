@@ -45,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
         prefer.createEditText[3] = (EditText)findViewById(R.id.year_text);
         prefer.createEditText[4] = (EditText)findViewById(R.id.publisher_text);
         prefer.createEditText[5] = (EditText)findViewById(R.id.pages_text);
-//        prefer = new CreatePosition(typeOfPosition);
     }
 
     public void onClickGenerate(View view) {
@@ -54,20 +53,20 @@ public class MainActivity extends AppCompatActivity {
 
         while (i != prefer.createEditText.length)
         {
-            prefer.texts[i] = new StringBuilder((res = prefer.createEditText[i].getText().toString()));
+            prefer.texts[i] = new StringBuilder(prefer.createEditText[i].getText().toString());
             i++;
         }
-        mResultEditText.setText(prefer.fill());
+        mResultEditText.setText(res = prefer.fill());
         context = getApplicationContext();
         Toast.makeText(context, "Строка создана успешно. Хотите скопировать в буфер?", Toast.LENGTH_SHORT).show();
     }
-    // метод для копирования текста в буфер обмена (не работает)
+
     public void onClickCopyToClipboard(View view){
         context = getApplicationContext();
         ClipboardManager clipboard = (ClipboardManager)
                 getSystemService(Context.CLIPBOARD_SERVICE);
         Toast.makeText(context, "Copy button", Toast.LENGTH_SHORT).show();
-        ClipData clip = ClipData.newPlainText("clip to clipboard", "Hello World!");
+        ClipData clip = ClipData.newPlainText("clip to clipboard", res);
         clipboard.setPrimaryClip(clip);
     }
 

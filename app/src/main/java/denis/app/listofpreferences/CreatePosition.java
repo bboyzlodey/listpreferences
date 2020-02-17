@@ -31,16 +31,10 @@ class CreatePosition {
 			create[3] = new StringBuilder(" // ");
 			create[5] = create[1];
 			create[7] = new StringBuilder(" - ");
-			create[9] = new StringBuilder(" - �");
-			create[11] = new StringBuilder(" - �. ");
+			create[9] = new StringBuilder(". - №");
+			create[11] = new StringBuilder(" - c. ");
 			create[13] = create[7];
             createEditText = new EditText[6];
-//            createEditText[0] = (EditText)findViewById(R.id.authors_text);
-//            createEditText[1] = (EditText)findViewById(R.id.article_text);
-//            createEditText[2] = (EditText)findViewById(R.id.journal_text);
-//            createEditText[3] = (EditText)findViewById(R.id.year_text);
-//            createEditText[4] = (EditText)findViewById(R.id.publisher_text);
-//            createEditText[5] = (EditText)findViewById(R.id.pages_text);
             texts = new StringBuilder[6];
         }
     }
@@ -95,7 +89,7 @@ class CreatePosition {
         int j = 0;
 
         while (i != this.create.length) {
-            if ((this.create[i].toString() == null) && j != this.createEditText.length)
+            if ((this.create[i] == null) && j != this.createEditText.length)
             {
                 this.create[i] = new StringBuilder(this.createEditText[j].getText().toString());
                 j++;

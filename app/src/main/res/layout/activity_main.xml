@@ -5,14 +5,17 @@
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
 	android:orientation="vertical"
-	android:background="@drawable/main_background">
+	android:layout_margin="5dp"
+	android:background="@color/black"
+	>
 	tools:context=".MainActivity">
 
 	<TextView
 		android:layout_width="match_parent"
-		android:layout_height="22dp"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="15dp"
 		android:layout_marginLeft="5dp"
-		android:layout_marginTop="20dp"
+		android:layout_weight="1"
 		android:text="\t\tВведите авторов:"
 		android:textColor="@color/colorWhiteUser"
 		android:textStyle="bold" />
@@ -21,24 +24,27 @@
 		android:id="@+id/authors_text"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:ems="10"
-		android:inputType="textPersonName"
-		android:textColorHint="@color/coral"
-		android:textColor="@color/colorWhiteUser"
-		android:hint="Скарлат Д.М., Конюхов Р.В., ... Савельев К.Г"
-		android:textSize="15dp"
 		android:layout_marginLeft="19dp"
-		android:layout_marginRight="19dp"/>
+		android:layout_marginRight="19dp"
+		android:layout_weight="1"
+		android:textColor="@color/colorWhiteUser"
+		android:textColorHighlight="@color/light_sea_green"
+		android:backgroundTint="@color/orange"
+		android:backgroundTintMode="src_atop"
+		android:textColorHint="@color/white_smoke"
+		android:hint="Конюхов Р.В., ... Савельев К.Г"
+
+		android:textSize="15dp" />
 
 	<TextView
 		android:id="@+id/name_of_article"
 		android:layout_width="match_parent"
 		android:layout_height="22dp"
 		android:layout_marginLeft="5dp"
-		android:layout_marginTop="10dp"
 		android:text="\t\tВведите название статьи:"
 		android:textColor="@color/colorWhiteUser"
-		android:textStyle="bold" />
+		android:textStyle="bold"
+		android:layout_weight="1"/>
 
 	<EditText
 		android:id="@+id/article_text"
@@ -46,19 +52,23 @@
 		android:layout_height="wrap_content"
 		android:ems="10"
 		android:inputType="textPersonName"
-		android:textColorHint="@color/orange"
-		android:hint="Получение углерода хитропопным способом"
-		android:textColor="@color/dark_orange"
+		android:textColor="@color/colorWhiteUser"
+		android:textColorHighlight="@color/light_sea_green"
+		android:backgroundTint="@color/orange"
+		android:backgroundTintMode="src_atop"
+		android:textColorHint="@color/white_smoke"
+		android:hint="Получение углерода и его применение"
 		android:textSize="15dp"
 		android:layout_marginLeft="19dp"
-		android:layout_marginRight="19dp"/>
+		android:layout_marginRight="19dp"
+		android:layout_weight="1"/>
 
 	<TextView
 		android:id="@+id/journal"
 		android:layout_width="match_parent"
 		android:layout_height="22dp"
 		android:layout_marginLeft="5dp"
-		android:layout_marginTop="20dp"
+		android:layout_weight="1"
 		android:text="\t\tВведите название журнала:"
 		android:textColor="@color/colorWhiteUser"
 		android:textStyle="bold" />
@@ -69,19 +79,23 @@
 		android:layout_height="wrap_content"
 		android:ems="10"
 		android:inputType="textPersonName"
-		android:hint="Успехи в химии..."
-		android:textColorHint="@color/orange_red"
-		android:textColor="@color/indian_red"
+		android:hint="Успехи в химии и химической технологии"
+		android:textColor="@color/colorWhiteUser"
+		android:textColorHighlight="@color/light_sea_green"
+		android:backgroundTint="@color/orange"
+		android:backgroundTintMode="src_atop"
+		android:textColorHint="@color/white_smoke"
 		android:textSize="15dp"
 		android:layout_marginLeft="19dp"
-		android:layout_marginRight="19dp"/>
+		android:layout_marginRight="19dp"
+		android:layout_weight="1"/>
 
 	<TextView
 		android:id="@+id/year"
 		android:layout_width="match_parent"
 		android:layout_height="22dp"
 		android:layout_marginLeft="5dp"
-		android:layout_marginTop="0dp"
+		android:layout_weight="1"
 		android:background="@android:color/transparent"
 		android:text="\t\tВведите год издания:"
 		android:textColor="@color/colorWhiteUser"
@@ -89,27 +103,29 @@
 
 	<EditText
 		android:id="@+id/year_text"
-		android:layout_width="match_parent"
+		android:layout_width="50dp"
 		android:layout_height="wrap_content"
-		android:ems="10"
-		android:inputType="textPersonName"
+		android:inputType="numberSigned"
 		android:hint="2020"
-		android:textColorHint="@color/light_sea_green"
 		android:textColor="@color/colorWhiteUser"
+		android:textColorHighlight="@color/light_sea_green"
+		android:backgroundTint="@color/orange"
+		android:backgroundTintMode="src_atop"
+		android:textColorHint="@color/white_smoke"
 		android:textSize="15dp"
 		android:layout_marginLeft="19dp"
-		android:layout_marginRight="180dp"/>
+		android:layout_weight="1"/>
 
 	<TextView
 		android:id="@+id/publisher"
 		android:layout_width="match_parent"
 		android:layout_height="22dp"
 		android:layout_marginLeft="5dp"
-		android:layout_marginTop="0dp"
 		android:background="@android:color/transparent"
 		android:text="\t\tВведите название издательства:"
 		android:textColor="@color/colorWhiteUser"
-		android:textStyle="bold" />
+		android:textStyle="bold"
+		android:layout_weight="1"/>
 
 	<EditText
 		android:id="@+id/publisher_text"
@@ -117,19 +133,23 @@
 		android:layout_height="wrap_content"
 		android:ems="10"
 		android:inputType="textPersonName"
-		android:hint="ХИМПРОМ"
-		android:textColorHint="@color/light_goldenrod_yellow"
 		android:textColor="@color/colorWhiteUser"
+		android:textColorHighlight="@color/light_sea_green"
+		android:backgroundTint="@color/orange"
+		android:backgroundTintMode="src_atop"
+		android:textColorHint="@color/white_smoke"
+		android:hint="ХИМПРОМ"
 		android:textSize="15dp"
 		android:layout_marginLeft="19dp"
-		android:layout_marginRight="20dp"/>
+		android:layout_marginRight="20dp"
+		android:layout_weight="1"/>
 
 	<TextView
 		android:id="@+id/pages"
 		android:layout_width="match_parent"
 		android:layout_height="22dp"
 		android:layout_marginLeft="5dp"
-		android:layout_marginTop="0dp"
+		android:layout_weight="1"
 		android:background="@android:color/transparent"
 		android:text="\t\tВведите страницы из журнала:"
 		android:textColor="@color/colorWhiteUser"
@@ -139,34 +159,45 @@
 		android:id="@+id/pages_text"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:ems="10"
-		android:inputType="textPersonName"
-		android:hint="40 - 44"
-		android:textColorHint="@color/light_blue"
-		android:textColor="@color/colorWhiteUser"
-		android:textSize="15dp"
 		android:layout_marginLeft="19dp"
-		android:layout_marginRight="220dp"/>
+		android:layout_marginRight="220dp"
+		android:layout_weight="1"
+		android:ems="10"
+		android:hint="40 - 44"
+		android:inputType="numberSigned"
+		android:textColor="@color/colorWhiteUser"
+		android:textColorHighlight="@color/light_sea_green"
+		android:backgroundTint="@color/orange"
+		android:backgroundTintMode="src_atop"
+		android:textColorHint="@color/white_smoke"
+		android:textSize="15dp" />
 
 
 	<EditText
 		android:id="@+id/result_text"
-		android:layout_width="270dp"
-		android:layout_height="51dp"
-		android:layout_marginTop="15dp"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
 		android:layout_gravity="center_horizontal"
-		android:background="#5C90A8"
 		android:hint="  Результат будет здесь"
-		android:textColor="#17E2C4"
-		android:textColorHint="#FFFFFF"
-		android:textSize="15dp" />
+		android:textColor="@color/white"
+		android:textColorHint="@color/white_smoke"
+		android:textSize="15dp"
+		android:textColorHighlight="@color/light_sea_green"
+		android:backgroundTint="@color/white_smoke"
+		android:backgroundTintMode="src_atop"
+		android:fitsSystemWindows="true"
+		android:clickable="false"
+		android:inputType="none"
+		android:contextClickable="false"
+		android:layout_weight="1"/>
 
 	<LinearLayout
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:orientation="horizontal"
 		android:layout_marginTop="10dp"
-		android:layout_gravity="center_horizontal">
+		android:layout_gravity="center_horizontal"
+		android:layout_weight="1">
 	<Button
 		android:id="@+id/my_button"
 		android:layout_width="wrap_content"
@@ -190,8 +221,6 @@
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_gravity="center_vertical"
-			android:outlineAmbientShadowColor="@color/light_goldenrod_yellow"
-			android:outlineSpotShadowColor="@color/light_sea_green"
 			android:text="Инфо"
 			android:onClick="onClickInfo"/>
 		
