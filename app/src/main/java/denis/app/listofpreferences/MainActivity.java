@@ -43,23 +43,31 @@ public class MainActivity extends AppCompatActivity {
         prefer.createEditText[1] = (EditText)findViewById(R.id.article_text);
         prefer.createEditText[2] = (EditText)findViewById(R.id.journal_text);
         prefer.createEditText[3] = (EditText)findViewById(R.id.year_text);
-        prefer.createEditText[4] = (EditText)findViewById(R.id.publisher_text);
-        prefer.createEditText[6] = (EditText)findViewById(R.id.pages_text);
-        prefer.createEditText[7] = (EditText)findViewById(R.id.pages_text2);
-        prefer.createEditText[5] = (EditText)findViewById(R.id.numb_journal);
+        prefer.createEditText[5] = (EditText)findViewById(R.id.pages_text);
+        prefer.createEditText[6] = (EditText)findViewById(R.id.pages_text2);
+        prefer.createEditText[4] = (EditText)findViewById(R.id.numb_journal);
     }
 
     public void onClickGenerate(View view) {
         int i = 0;
         int j = 0;
 
+        context = getApplicationContext();
+        prefer.clear();
         while (i != prefer.createEditText.length)
         {
             prefer.texts[i] = new StringBuilder(prefer.createEditText[i].getText().toString());
             i++;
         }
-        mResultEditText.setText(res = prefer.fill());
-        context = getApplicationContext();
+        try {
+            mResultEditText.setText(res = prefer.fill());
+        }
+        catch (StringIndexOutOfBoundsException e){
+            prefer.createEditText[0].setHint("Например: Романов К.Г., Карпиевич П.А.");
+            Toast.makeText(context, "Введите правильно авторов!", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         Toast.makeText(context, "Строка создана успешно. Хотите скопировать в буфер?", Toast.LENGTH_SHORT).show();
     }
 

@@ -30,12 +30,12 @@ class CreatePosition {
 			create[1] = new StringBuilder(" ");
 			create[3] = new StringBuilder(" // ");
 			create[5] = create[1];
-			create[7] = new StringBuilder(" - ");
+			create[7] = new StringBuilder(". - ");
 			create[9] = new StringBuilder(". - №");
 			create[11] = new StringBuilder(" - c. ");
-			create[13] = create[7];
-            createEditText = new EditText[8];
-            texts = new StringBuilder[8];
+			create[13] = new StringBuilder(" - ");
+            createEditText = new EditText[7];
+            texts = new StringBuilder[7];
         }
     }
 	
@@ -72,8 +72,8 @@ class CreatePosition {
 
 
     public String fill(){
-        int i = 0;
-        int j = 0;
+        int i = 1;
+        int j = 1;
 
         while (i != this.create.length) {
             if ((this.create[i] == null) && j != this.createEditText.length)
@@ -94,6 +94,18 @@ class CreatePosition {
     }
     static public StringBuilder firstAuthor(String oneAuthor)
     {
-        return (new StringBuilder(oneAuthor.substring(0,oneAuthor.indexOf('.', oneAuthor.indexOf('.') + 1))));
+        return (new StringBuilder(oneAuthor.substring(0,oneAuthor.indexOf('.', oneAuthor.indexOf('.') + 1) + 1)));
+    }
+    public void clear(){
+        if (this.create[0] == null)
+            return;
+        this.create[0] = null;
+        this.create[2] = null;
+        this.create[4] = null;
+        this.create[6] = null;
+        this.create[8] = null;
+        this.create[10] = null;
+        this.create[12] = null;
+        this.create[14] = null;
     }
 }

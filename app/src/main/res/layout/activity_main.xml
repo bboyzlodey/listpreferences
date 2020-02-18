@@ -118,32 +118,6 @@
 		android:layout_marginLeft="19dp"
 		android:layout_weight="0"/>
 
-	<TextView
-		android:id="@+id/publisher"
-		android:layout_width="match_parent"
-		android:layout_height="22dp"
-		android:layout_marginLeft="15dp"
-		android:background="@android:color/transparent"
-		android:text="Название издательства:"
-		android:textColor="@color/colorWhiteUser"
-		android:textStyle="bold"
-		android:layout_weight="0"/>
-
-	<EditText
-		android:id="@+id/publisher_text"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:inputType="textCapSentences"
-		android:textColor="@color/colorWhiteUser"
-		android:textColorHighlight="@color/light_sea_green"
-		android:backgroundTint="@color/orange"
-		android:backgroundTintMode="src_atop"
-		android:textColorHint="@color/white_smoke"
-		android:hint="Химпром"
-		android:textSize="15dp"
-		android:layout_marginLeft="19dp"
-		android:layout_marginRight="20dp"
-		android:layout_weight="0"/>
 
 
 	<RelativeLayout
@@ -151,7 +125,7 @@
 		android:layout_height="wrap_content"
 		android:layout_marginLeft="15dp"
 		android:layout_marginRight="15dp"
-		android:layout_weight="1">
+		android:layout_weight="0">
 		<TextView
 			android:id="@+id/pages"
 			android:layout_width="wrap_content"
@@ -231,13 +205,14 @@
 		android:layout_height="wrap_content"
 		android:layout_gravity="center_horizontal"
 		android:hint="  Результат будет здесь"
+		android:layout_marginTop="20dp"
 		android:textColor="@color/white"
 		android:textColorHint="@color/white_smoke"
 		android:textSize="15dp"
 		android:textColorHighlight="@color/light_sea_green"
 		android:backgroundTint="@color/white_smoke"
 		android:backgroundTintMode="src_atop"
-		android:layout_weight="1"/>
+		android:layout_weight="0"/>
 
 	<LinearLayout
 		android:layout_width="wrap_content"
@@ -245,7 +220,7 @@
 		android:orientation="horizontal"
 		android:layout_marginTop="10dp"
 		android:layout_gravity="center_horizontal"
-		android:layout_weight="1">
+		android:layout_weight="0">
 	<Button
 		android:id="@+id/my_button"
 		android:layout_width="wrap_content"
@@ -271,7 +246,11 @@
 			android:layout_gravity="center_vertical"
 			android:text="Инфо"
 			android:onClick="onClickInfo"/>
-		
-	</LinearLayout>
 
+	</LinearLayout>
+	<ImageView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:src="@drawable/dzhei_774_k"
+		android:background="@color/white"/>
 </LinearLayout>
