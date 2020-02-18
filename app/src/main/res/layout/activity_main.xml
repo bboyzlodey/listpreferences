@@ -248,9 +248,20 @@
 			android:onClick="onClickInfo"/>
 
 	</LinearLayout>
-	<ImageView
+	<RelativeLayout
 		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:src="@drawable/dzhei_774_k"
-		android:background="@color/white"/>
+		android:layout_height="wrap_content">
+		<ImageView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:src="@drawable/dzhei_774_k"
+			android:background="@color/white"/>
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Привет!\nМеня зовут Джейк.\nЯ тот, кто поможет!:-)"
+			android:textSize="11sp"
+			android:layout_marginTop="10dp"
+			android:layout_marginLeft="10dp"/>
+	</RelativeLayout>
 </LinearLayout>
